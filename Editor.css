@@ -553,3 +553,191 @@ body {
     }
 
 }
+/* =========================================
+   STORY MANAGEMENT PAGE
+   ========================================= */
+
+.story-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #171717;
+    margin-bottom: 30px;
+    overflow-x: auto;
+}
+
+.story-tab {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 13px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #777777;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.story-tab:hover {
+    color: #641426;
+}
+
+.story-tab.active {
+    color: #641426;
+    border-bottom-color: #641426;
+}
+
+
+/* =========================================
+   NEW STORY LINK
+   ========================================= */
+
+.new-story-link {
+    color: #641426;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+.new-story-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   STORY LIST
+   ========================================= */
+
+.story-list {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+}
+
+.story-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 25px;
+    border-bottom: 1px solid #ebe7e4;
+}
+
+.story-item:last-child {
+    border-bottom: none;
+}
+
+.story-info {
+    flex: 1;
+}
+
+.story-category {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #641426;
+    margin-bottom: 8px;
+}
+
+.story-info h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 7px;
+}
+
+.story-info p {
+    color: #666666;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.story-info small {
+    color: #999999;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   STORY STATUS
+   ========================================= */
+
+.story-status {
+    min-width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.story-status .status {
+    text-align: center;
+    min-width: 90px;
+}
+
+.draft-status {
+    color: #777777;
+    border-color: #999999;
+}
+
+.scheduled-status {
+    color: #8b5a00;
+    border-color: #8b5a00;
+}
+
+.published-status {
+    color: #28734b;
+    border-color: #28734b;
+}
+
+
+/* =========================================
+   STORY ACTION
+   ========================================= */
+
+.story-action {
+    background: transparent;
+    border: 1px solid #cfc9c5;
+    padding: 8px 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.story-action:hover {
+    background: #641426;
+    color: #ffffff;
+    border-color: #641426;
+}
+
+
+/* =========================================
+   STORY MOBILE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .story-tabs {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    .story-tab {
+        padding: 12px 14px;
+        font-size: 9px;
+    }
+
+    .story-item {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .story-status {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+}
