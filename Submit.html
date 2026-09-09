@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit | The Private Eye</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .submit-page {
+            max-width: 700px;
+            margin: 70px auto;
+            padding: 0 25px;
+        }
+
+        .submit-page h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(40px, 7vw, 64px);
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .submit-intro {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .submit-form label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .submit-form input,
+        .submit-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .submit-form textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .submit-form button {
+            background: #a94442;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .submit-form button:hover {
+            opacity: 0.9;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            color: #a94442;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="masthead">
+    <div class="topline">
+        <span>THE SCHOOL IS TALKING.</span>
+        <span>WE'RE LISTENING.</span>
+    </div>
+
+    <h1>The Private Eye</h1>
+</header>
+
+<main class="submit-page">
+
+    <p class="section-label">SEND IT IN</p>
+
+    <h1>Got Something to Share?</h1>
+
+    <p class="submit-intro">
+        Have a story, tip, moment, or campus buzz worth sharing?
+        Send it our way. Submissions are reviewed before anything
+        is published.
+    </p>
+
+    <form class="submit-form">
+
+        <label for="name">Name (optional)</label>
+        <input type="text" id="name" name="name">
+
+        <label for="subject">What's it about?</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="story">Your submission</label>
+        <textarea id="story" name="story" required></textarea>
+
+        <button type="submit">SEND SUBMISSION</button>
+
+    </form>
+
+    <a href="index.html" class="back-home">
+        ← Back to The Private Eye
+    </a>
+
+</main>
+
+</body>
+</html>
