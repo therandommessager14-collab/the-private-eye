@@ -464,3 +464,92 @@ body {
     }
 
 }
+/* =========================================
+   SCHEDULE PUBLICATION
+   ========================================= */
+
+.schedule-box {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    padding: 28px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.schedule-title {
+    border-bottom: 1px solid #ded9d5;
+    padding-bottom: 15px;
+    margin-bottom: 22px;
+}
+
+.schedule-title h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.schedule-title span {
+    color: #777777;
+    font-size: 12px;
+}
+
+.schedule-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.schedule-field label {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    margin-bottom: 8px;
+}
+
+.schedule-field input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cfc9c5;
+    background: #fcfbfa;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #171717;
+}
+
+.schedule-field input:focus {
+    outline: none;
+    border-color: #641426;
+}
+
+.schedule-note {
+    margin-top: 20px;
+    padding: 13px 15px;
+    background: #f7f4f1;
+    color: #666666;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.schedule-note strong {
+    color: #641426;
+}
+
+
+/* =========================================
+   SCHEDULE MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .schedule-box {
+        padding: 20px;
+    }
+
+    .schedule-fields {
+        grid-template-columns: 1fr;
+    }
+
+}
