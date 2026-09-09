@@ -317,3 +317,150 @@ body {
         gap: 12px;
         flex-direction: column;
     }
+/* =========================================
+   WRITE NEW STORY PAGE
+   ========================================= */
+
+.editor-field {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    padding: 22px;
+    margin-bottom: 18px;
+}
+
+.editor-field label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.editor-field input[type="text"],
+.editor-field select,
+.editor-field textarea {
+    width: 100%;
+    border: 1px solid #cfc9c5;
+    background: #fcfbfa;
+    padding: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #171717;
+    outline: none;
+}
+
+.editor-field input[type="text"]:focus,
+.editor-field select:focus,
+.editor-field textarea:focus {
+    border-color: #641426;
+}
+
+.editor-field input[type="text"]::placeholder,
+.editor-field textarea::placeholder {
+    color: #999999;
+}
+
+.editor-field textarea {
+    resize: vertical;
+    min-height: 300px;
+    line-height: 1.7;
+}
+
+.editor-field small {
+    display: block;
+    margin-top: 8px;
+    color: #777777;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SEARCH VISIBILITY
+   ========================================= */
+
+.checkbox-field {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.checkbox-field input {
+    width: 17px;
+    height: 17px;
+    accent-color: #641426;
+}
+
+.checkbox-field label {
+    font-size: 13px;
+    color: #444444;
+}
+
+
+/* =========================================
+   PUBLISHING ACTIONS
+   ========================================= */
+
+.publishing-actions {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    padding: 22px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.publishing-actions button {
+    padding: 13px 22px;
+    border: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.secondary-button {
+    background: #eeeeec;
+    color: #171717;
+    border: 1px solid #d6d1cd !important;
+}
+
+.secondary-button:hover {
+    background: #dedad7;
+}
+
+.primary-button {
+    background: #641426;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #171717;
+}
+
+
+/* =========================================
+   WRITE STORY MOBILE DESIGN
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .editor-field {
+        padding: 17px;
+    }
+
+    .publishing-actions {
+        flex-direction: column;
+    }
+
+    .publishing-actions button {
+        width: 100%;
+    }
+
+}
