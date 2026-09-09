@@ -1,0 +1,319 @@
+/* =========================================
+   NILE NEWS — EDITOR DESK
+   Part C: Editor Dashboard Styling
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f4f1;
+    color: #171717;
+    line-height: 1.6;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.editor-header {
+    background: #641426;
+    color: #ffffff;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #171717;
+}
+
+.editor-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-brand h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 2px;
+}
+
+.editor-brand span {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.view-site {
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+}
+
+.view-site:hover {
+    background: #ffffff;
+    color: #641426;
+}
+
+/* =========================================
+   MAIN DASHBOARD
+   ========================================= */
+
+.dashboard {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 45px 30px 70px;
+}
+
+.dashboard-intro {
+    margin-bottom: 35px;
+}
+
+.dashboard-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.dashboard-intro p {
+    color: #666666;
+    font-size: 15px;
+}
+
+/* =========================================
+   STAT CARDS
+   ========================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 45px;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    padding: 25px;
+    min-height: 135px;
+    position: relative;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #641426;
+}
+
+.stat-card h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #777777;
+    margin-bottom: 12px;
+}
+
+.stat-number {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+    color: #641426;
+}
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #171717;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section-heading h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.section-heading span {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #777777;
+}
+
+/* =========================================
+   QUICK ACTIONS
+   ========================================= */
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+    color: #171717;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: 0.2s ease;
+}
+
+.action-button:hover {
+    background: #641426;
+    color: #ffffff;
+    border-color: #641426;
+}
+
+/* =========================================
+   RECENT ACTIVITY
+   ========================================= */
+
+.activity {
+    background: #ffffff;
+    border: 1px solid #ded9d5;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-bottom: 1px solid #ebe7e4;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-info strong {
+    display: block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.activity-info small {
+    color: #777777;
+    font-size: 12px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #641426;
+    color: #641426;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.editor-footer {
+    background: #171717;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+.editor-footer p {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.editor-footer span {
+    display: block;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #aaaaaa;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .editor-header {
+        padding: 18px 20px;
+    }
+
+    .editor-brand h1 {
+        font-size: 23px;
+    }
+
+    .view-site {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .dashboard {
+        padding: 35px 18px 55px;
+    }
+
+    .dashboard-intro h2 {
+        font-size: 30px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-item {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
