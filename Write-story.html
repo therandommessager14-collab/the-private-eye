@@ -180,22 +180,86 @@
                 <h3>Publishing</h3>
                 <span>Publication Settings</span>
             </div>
+        <div class="publishing-actions">
 
-            <div class="publishing-actions">
+    <button type="button" class="secondary-button">
+        Save Draft
+    </button>
 
-                <button type="button" class="secondary-button">
-                    Save Draft
-                </button>
+    <button type="button" class="secondary-button">
+        Schedule Story
+    </button>
 
-                <button type="button" class="secondary-button">
-                    Schedule Story
-                </button>
+    <button type="button" class="primary-button">
+        Publish Now
+    </button>
 
-                <button type="button" class="primary-button">
-                    Publish Now
-                </button>
+</div>
 
-            </div>
+
+<!-- SCHEDULE SETTINGS -->
+
+<div class="schedule-box">
+
+    <div class="schedule-title">
+        <h4>Schedule Publication</h4>
+
+        <span>
+            Choose when this story should go live.
+        </span>
+    </div>
+
+
+    <div class="schedule-fields">
+
+        <div class="schedule-field">
+
+            <label for="publish-date">
+                Publication Date
+            </label>
+
+            <input
+                type="date"
+                id="publish-date"
+                name="publish-date"
+            >
+
+        </div>
+
+
+        <div class="schedule-field">
+
+            <label for="publish-time">
+                Publication Time
+            </label>
+
+            <input
+                type="time"
+                id="publish-time"
+                name="publish-time"
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="schedule-note">
+
+        <strong>Scheduled:</strong>
+
+        This story will remain unpublished until the selected
+        date and time.
+
+    </div>
+
+</div>
+          
+                
+                
+            
+
+    
 
         </section>
 
