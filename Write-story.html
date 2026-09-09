@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nile News — Write New Story</title>
+
+    <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+
+    <!-- EDITOR HEADER -->
+    <header class="editor-header">
+
+        <div class="editor-brand">
+            <h1>NILE NEWS</h1>
+            <span>Editor Desk</span>
+        </div>
+
+        <a href="editor.html" class="view-site">
+            ← Back to Editor
+        </a>
+
+    </header>
+
+
+    <!-- MAIN EDITOR -->
+    <main class="dashboard">
+
+        <div class="dashboard-intro">
+            <h2>Write New Story</h2>
+            <p>Create, edit and prepare a story for publication.</p>
+        </div>
+
+
+        <!-- STORY DETAILS -->
+        <section>
+
+            <div class="section-heading">
+                <h3>Story Details</h3>
+                <span>New Article</span>
+            </div>
+
+
+            <!-- HEADLINE -->
+            <div class="editor-field">
+
+                <label for="headline">
+                    Headline
+                </label>
+
+                <input
+                    type="text"
+                    id="headline"
+                    name="headline"
+                    placeholder="Enter your headline..."
+                >
+
+            </div>
+
+
+            <!-- SECTION -->
+            <div class="editor-field">
+
+                <label for="section">
+                    Section
+                </label>
+
+                <select id="section" name="section">
+
+                    <option value="">
+                        Select a section
+                    </option>
+
+                    <option value="just-in">
+                        Just In
+                    </option>
+
+                    <option value="on-the-radar">
+                        On the Radar
+                    </option>
+
+                    <option value="the-buzz">
+                        The Buzz
+                    </option>
+
+                    <option value="spotted">
+                        Spotted
+                    </option>
+
+                    <option value="entertainment">
+                        Entertainment
+                    </option>
+
+                    <option value="style-luxury">
+                        Style & Luxury
+                    </option>
+
+                    <option value="editorial">
+                        Editorial
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FEATURED IMAGE -->
+            <div class="editor-field">
+
+                <label for="image">
+                    Featured Image
+                </label>
+
+                <input
+                    type="text"
+                    id="image"
+                    name="image"
+                    placeholder="Paste image URL..."
+                >
+
+                <small>
+                    Add the image you want to appear with the story.
+                </small>
+
+            </div>
+
+
+            <!-- STORY -->
+            <div class="editor-field">
+
+                <label for="story">
+                    Story
+                </label>
+
+                <textarea
+                    id="story"
+                    name="story"
+                    rows="18"
+                    placeholder="Write your story here..."
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH SETTINGS -->
+        <section>
+
+            <div class="section-heading">
+                <h3>Search Visibility</h3>
+                <span>Reader Search</span>
+            </div>
+
+            <div class="checkbox-field">
+
+                <input
+                    type="checkbox"
+                    id="search-visible"
+                    name="search-visible"
+                    checked
+                >
+
+                <label for="search-visible">
+                    Allow this story to appear in Nile News search results.
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- PUBLISHING -->
+        <section>
+
+            <div class="section-heading">
+                <h3>Publishing</h3>
+                <span>Publication Settings</span>
+            </div>
+
+            <div class="publishing-actions">
+
+                <button type="button" class="secondary-button">
+                    Save Draft
+                </button>
+
+                <button type="button" class="secondary-button">
+                    Schedule Story
+                </button>
+
+                <button type="button" class="primary-button">
+                    Publish Now
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="editor-footer">
+
+        <p>NILE NEWS — EDITOR DESK</p>
+
+        <span>
+            Private publishing area
+        </span>
+
+    </footer>
+
+</body>
+</html>
