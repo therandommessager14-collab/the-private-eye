@@ -44,7 +44,8 @@
 
   <div class="grid two">
 
-    <article>
+      <article>
+
       <span class="tag">STYLE</span>
 
       <h3>The campus style file.</h3>
@@ -52,7 +53,13 @@
       <p>
         The looks, trends and personal style moments getting attention around campus.
       </p>
+
+      <a href="articles/campus-style.html">
+        READ STORY →
+      </a>
+
     </article>
+
 
     <article>
       <span class="tag">LIFESTYLE</span>
