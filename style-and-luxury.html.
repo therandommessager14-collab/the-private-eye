@@ -61,15 +61,21 @@
     </article>
 
 
-    <article>
-      <span class="tag">LIFESTYLE</span>
+   <article>
 
-      <h3>Where the campus is going next.</h3>
+  <span class="tag">LIFESTYLE</span>
 
-      <p>
-        Events, experiences and lifestyle stories worth keeping an eye on.
-      </p>
-    </article>
+  <h3>Where the campus is going next.</h3>
+
+  <p>
+    Events, experiences and lifestyle stories worth keeping an eye on.
+  </p>
+
+  <a href="articles/campus-lifestyle.html">
+    READ STORY →
+  </a>
+
+</article>
 
   </div>
 
