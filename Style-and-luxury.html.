@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Style & Luxury — The Private Eye</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="masthead">
+
+  <div class="topline">
+    <span>THE SCHOOL IS TALKING.</span>
+    <span>WE'RE LISTENING.</span>
+  </div>
+
+  <h1>The private eye</h1>
+
+  <p class="dek">Style & Luxury</p>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="just-in.html">JUST IN</a>
+    <a href="on-the-radar.html">ON THE RADAR</a>
+    <a href="the-buzz.html">THE BUZZ</a>
+    <a href="spotted.html">SPOTTED</a>
+    <a href="submit.html">SUBMIT</a>
+  </nav>
+
+</header>
+
+<main>
+
+<section>
+
+  <div class="section-head">
+    <h2>STYLE & LUXURY</h2>
+    <span>Fashion • Events • Lifestyle • Culture</span>
+  </div>
+
+  <div class="grid two">
+
+    <article>
+      <span class="tag">STYLE</span>
+
+      <h3>The campus style file.</h3>
+
+      <p>
+        The looks, trends and personal style moments getting attention around campus.
+      </p>
+    </article>
+
+    <article>
+      <span class="tag">LIFESTYLE</span>
+
+      <h3>Where the campus is going next.</h3>
+
+      <p>
+        Events, experiences and lifestyle stories worth keeping an eye on.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <strong>The private eye</strong>
+
+  <p>
+    Until the Next Drop.<br>
+    The Private Eye.
+  </p>
+
+</footer>
+
+</body>
+</html>
