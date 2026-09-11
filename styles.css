@@ -10,9 +10,11 @@ html {
 
 body {
   font-family: Arial, sans-serif;
+
   background:
     linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
     url("images/IMG_2794.jpeg") center center / cover fixed;
+
   color: #fff;
   line-height: 1.6;
 }
