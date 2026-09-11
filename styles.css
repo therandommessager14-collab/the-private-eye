@@ -10,11 +10,12 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+    url("images/YOUR-IMAGE-FILENAME.jpg") center center / cover fixed;
+  color: #fff;
   line-height: 1.6;
 }
-
 
 /* HEADER */
 
