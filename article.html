@@ -91,7 +91,7 @@ async function loadStory() {
 
   try {
 
-    const response = await fetch("articles/welcome.md");
+    const response = await fetch("https://raw.githubusercontent.com/therandommessager14/The-private-eye/main/articles/welcome.md");
 
     if (!response.ok) {
       throw new Error("Story could not be loaded.");
