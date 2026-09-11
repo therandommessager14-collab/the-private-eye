@@ -475,4 +475,14 @@ footer p {
   height: auto;
   margin: 35px auto 45px;
   object-fit: cover;
+}.back-link {
+  color: #b00000;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.back-link:hover {
+  color: #000;
 }
