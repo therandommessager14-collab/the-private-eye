@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Private Eye</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="masthead">
+  <div class="topline">
+    <span>THE SCHOOL IS TALKING.</span>
+    <span>WE'RE LISTENING.</span>
+  </div>
+
+  <h1>The private eye</h1>
+
+  <p class="dek">Spotted. Heard. Reported.</p>
+</header>
+
+<main>
+  <article class="story-page">
+    <p class="eyebrow" id="category"></p>
+
+    <h2 id="title">Loading story...</h2>
+
+    <p id="date"></p>
+
+    <div id="story">
+      Loading...
+    </div>
+
+    <p id="author"></p>
+  </article>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+async function loadStory() {
+
+  const file = "articles/The%20Private%20Eye%20is%20Officially%20Open.md";
+
+  const response = await fetch(file);
+
+  if (!response.ok) {
+    document.getElementById("story").textContent =
+      "This story could not be loaded.";
+    return;
+  }
+
+  const markdown = await response.text();
+
+  let content = markdown;
+
+  const frontMatter = markdown.match(/^---[\\s\\S]*?---/);
+
+  if (frontMatter) {
+    const meta = frontMatter[0];
+
+    const title = meta.match(/title:\\s*(.*)/);
+    const category = meta.match(/category:\\s*(.*)/);
+    const date = meta.match(/date:\\s*(.*)/);
+    const author = meta.match(/author:\\s*(.*)/);
+
+    if (title) document.getElementById("title").textContent = title[1].trim();
+    if (category) document.getElementById("category").textContent = category[1].trim();
+    if (date) document.getElementById("date").textContent = date[1].trim();
+    if (author) document.getElementById("author").textContent = author[1].trim();
+
+    content = markdown.replace(frontMatter[0], "").trim();
+  }
+
+  document.getElementById("story").innerHTML = marked.parse(content);
+}
+
+loadStory();
+</script>
+
+</body>
+</html>
