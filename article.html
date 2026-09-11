@@ -45,7 +45,7 @@ async function loadStory() {
 
   const file = "articles/welcome.md";
 
-  const response = await fetch(file);
+  const response = await fetch("./" + file);
 
   if (!response.ok) {
     document.getElementById("story").textContent =
