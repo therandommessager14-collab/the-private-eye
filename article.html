@@ -7,6 +7,47 @@
   <title>The Private Eye</title>
 
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .story-page {
+      max-width: 850px;
+      margin: 70px auto;
+      padding: 35px;
+    }
+
+    .story-page .eyebrow {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .story-page h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .story-date {
+      font-size: 14px;
+      opacity: 0.65;
+      margin-bottom: 40px;
+    }
+
+    .story-content {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .story-content p {
+      margin-bottom: 22px;
+    }
+
+    .story-author {
+      margin-top: 45px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,62 +64,110 @@
 </header>
 
 <main>
+
   <article class="story-page">
+
     <p class="eyebrow" id="category"></p>
 
     <h2 id="title">Loading story...</h2>
 
-    <p id="date"></p>
+    <p class="story-date" id="date"></p>
 
-    <div id="story">
+    <div class="story-content" id="story">
       Loading...
     </div>
 
-    <p id="author"></p>
+    <p class="story-author" id="author"></p>
+
   </article>
+
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <script>
+
 async function loadStory() {
 
-  const file = "articles/welcome.md";
+  try {
 
-  const response = await fetch("./" + file);
+    const response = await fetch("articles/welcome.md");
 
-  if (!response.ok) {
+    if (!response.ok) {
+      throw new Error("Story could not be loaded.");
+    }
+
+    const markdown = await response.text();
+
+    const frontMatterMatch =
+      markdown.match(/^---[\s\S]*?---/);
+
+    let content = markdown;
+
+    if (frontMatterMatch) {
+
+      const metadata = frontMatterMatch[0];
+
+      const title =
+        metadata.match(/title:\s*(.*)/);
+
+      const category =
+        metadata.match(/category:\s*(.*)/);
+
+      const date =
+        metadata.match(/date:\s*(.*)/);
+
+      const author =
+        metadata.match(/author:\s*(.*)/);
+
+      if (title) {
+        document.getElementById("title").textContent =
+          title[1].trim();
+      }
+
+      if (category) {
+        document.getElementById("category").textContent =
+          category[1].trim();
+      }
+
+      if (date) {
+        document.getElementById("date").textContent =
+          new Date(date[1].trim()).toLocaleDateString(
+            "en-US",
+            {
+              year: "numeric",
+              month: "long",
+              day: "numeric"
+            }
+          );
+      }
+
+      if (author) {
+        document.getElementById("author").textContent =
+          "— " + author[1].trim();
+      }
+
+      content =
+        markdown.replace(frontMatterMatch[0], "").trim();
+    }
+
+    document.getElementById("story").innerHTML =
+      marked.parse(content);
+
+  } catch (error) {
+
+    document.getElementById("title").textContent =
+      "Story unavailable";
+
     document.getElementById("story").textContent =
       "This story could not be loaded.";
-    return;
+
   }
 
-  const markdown = await response.text();
-
-  let content = markdown;
-
-  const frontMatter = markdown.match(/^---[\\s\\S]*?---/);
-
-  if (frontMatter) {
-    const meta = frontMatter[0];
-
-    const title = meta.match(/title:\\s*(.*)/);
-    const category = meta.match(/category:\\s*(.*)/);
-    const date = meta.match(/date:\\s*(.*)/);
-    const author = meta.match(/author:\\s*(.*)/);
-
-    if (title) document.getElementById("title").textContent = title[1].trim();
-    if (category) document.getElementById("category").textContent = category[1].trim();
-    if (date) document.getElementById("date").textContent = date[1].trim();
-    if (author) document.getElementById("author").textContent = author[1].trim();
-
-    content = markdown.replace(frontMatter[0], "").trim();
-  }
-
-  document.getElementById("story").innerHTML = marked.parse(content);
 }
 
 loadStory();
+
 </script>
 
 </body>
