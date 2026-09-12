@@ -466,14 +466,16 @@ footer p {
     flex-direction: column;
     gap: 4px;
   }
+  
+.article-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 40px;
+}
 
-}.article-image {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  margin: 35px auto 45px;
-  object-fit: cover;
 }.back-link {
   color: #b00000;
   text-decoration: none;
